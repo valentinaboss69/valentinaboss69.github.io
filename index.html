@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Privado da Valentina </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{
+      --bg:#111;
+      --card:#1a1a1a;
+      --accent:#ff0055;
+      --text:#eee;
+      --sub:#999;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:var(--bg);color:var(--text);line-height:1.5}
+    header{background:var(--accent);padding:1.2rem 2rem;text-align:center;font-size:2rem;font-weight:700;letter-spacing:1px}
+    nav{display:flex;gap:1rem;justify-content:center;padding:1rem 0;background:#000}
+    nav a{color:var(--text);text-decoration:none;padding:.5rem 1rem;border:1px solid transparent;transition:.3s}
+    nav a:hover{border-color:var(--accent)}
+    section{max-width:1000px;margin:2rem auto;padding:0 1rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .card{background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 0 10px rgba(0,0,0,.5)}
+    .card img{width:100%;height:200px;object-fit:cover;display:block}
+    .card-body{padding:1rem}
+    .card-body h3{margin-bottom:.5rem;color:var(--accent)}
+    .price{font-size:1.3rem;font-weight:700;margin:.5rem 0}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1.2rem;border-radius:4px;text-decoration:none;margin-top:.5rem;transition:.3s}
+    .btn:hover{filter:brightness(1.2)}
+    footer{text-align:center;padding:2rem 1rem;background:#000;font-size:.9rem;color:var(--sub)}
+    /* ===== Área editável ===== */
+    [contenteditable]{outline:2px dashed transparent;transition:.3s}
+    [contenteditable]:focus{outline-color:var(--accent)}
+  </style>
+</head>
+<body>
+
+<header contenteditable="true">
+  Privado da Valentina 🍑
+</header>
+
+<nav>
+  <a href="#packs">Packs</a>
+  <a href="https://t.me/valentinaboss69">Contato</a>
+</nav>
+
+<section id="packs">
+  <h2>Packs de Videos e Fotos</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="MATHEUS/WhatsApp Image 2026-01-05 at 09.42.32.jpeg" alt="Pack de Videos">
+      <div class="card-body">
+        <h3 contenteditable="true">Pack Sensual 39 fotos e Videos</h3>
+        <p contenteditable="true">Álbum completo com 39 imagens em alta resolução.</p>
+        <div class="price" contenteditable="true">R$ 29,99</div>
+        <a class="btn" href="https://pay.kiwify.com.br/V4jZ5va" target="_blank">Comprar agora</a>
+      </div>
+    </div>
+
+   
+
+
+
+
+
+  </ul>
+  <p contenteditable="true">Envio do material assim que confirmação na conta (geralmente em minutos). Links via Telegram</p>
+</section>
+
+<footer>
+  <p contenteditable="true">© 2026 Valentina Boss – Todo o conteúdo é protegido por direitos autorais. Proibido reupload.</p>
+</footer>
+
+<!-- ===== Script simples para salvar alterações localmente ===== -->
+<script>
+  document.querySelectorAll('[contenteditable="true"]').forEach(el=>{
+    el.addEventListener('blur',()=>{
+      localStorage.setItem(el.id||el.tagName+Math.random(),el.innerHTML);
+    });
+    const salvo = localStorage.getItem(el.id||el.tagName+Math.random());
+    if(salvo) el.innerHTML = salvo;
+  });
+</script>
+
+</body>
+</html>
